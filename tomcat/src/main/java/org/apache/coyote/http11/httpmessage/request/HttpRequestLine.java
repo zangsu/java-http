@@ -24,12 +24,6 @@ public record HttpRequestLine(
         return httpMethod == HttpMethod.POST;
     }
 
-    public boolean isStaticResourceRequest() {
-        return target.contains(".css") ||
-                target.contains(".html") ||
-                target.contains(".js");
-    }
-
     @Override
     public String toString() {
         return "RequestLine{" +
